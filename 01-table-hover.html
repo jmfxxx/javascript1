@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01 table-hober Document</title>
+    <style>
+    #table-hover {
+        width: 80%;
+        margin: 10px auto;
+        border-collapse: collapse;
+    }
+
+    thead {
+        font-weight: bold;
+        background-color: #f5f5f5;
+        text-align: center;
+    }
+    tbody {
+        border:1px solid #333;
+        padding: 6px;
+        text-align: center;
+    }    
+    .tr-active {
+        background-color: #ccc;
+    }
+
+    </style>
+</head>
+<body>
+ 
+    <table id='table-hover'>
+        <thead>
+            <tr>
+                <td>序號</td>
+                <td>學號</td>
+                <td>姓名</td>
+                <td>手機</td>
+                <td>skype</td>
+            </tr>
+        </thead>
+         <tbody>
+             <tr>
+                 <td>1</td>
+                 <td>2019053101</td>
+                 <td>前端工程師1</td>
+                 <td>09881111</td>
+                 <td>ab01</td>
+             </tr>
+             <tr>
+                 <td>2</td>
+                 <td>2019053102</td>
+                 <td>前端工程師2</td>
+                 <td>09881112</td>
+                 <td>ab02</td>
+             </tr>
+             <tr>
+                 <td>3</td>
+                 <td>2019053103</td>
+                 <td>前端工程師3</td>
+                 <td>09881113</td>
+                 <td>ab03</td>
+             </tr>
+             <tr>
+                 <td>4</td>
+                 <td>2019053104</td>
+                 <td>前端工程師4</td>
+                 <td>09881114</td>
+                 <td>ab04</td>
+             </tr>
+             <tr>
+                 <td>5</td>
+                 <td>2019053105</td>
+                 <td>前端工程師5</td>
+                 <td>09881115</td>
+                 <td>ab05</td>
+             </tr>
+             <tr>
+                 <td>6</td>
+                 <td>2019053106</td>
+                 <td>前端工程師6</td>
+                 <td>09881116</td>
+                 <td>ab06</td>
+             </tr>
+             <tr>
+                 <td>7</td>
+                 <td>2019053107</td>
+                 <td>前端工程師7</td>
+                 <td>09881117</td>
+                 <td>ab07</td>
+             </tr>
+             <tr>
+                 <td>8</td>
+                 <td>2019053108</td>
+                 <td>前端工程師8</td>
+                 <td>09881118</td>
+                 <td>ab08</td>
+             </tr>
+             <tr>
+                 <td>9</td>
+                 <td>2019053109</td>
+                 <td>前端工程師9</td>
+                 <td>09881119</td>
+                 <td>ab09</td>
+             </tr>
+             <tr>
+                 <td>10</td>
+                 <td>2019053110</td>
+                 <td>前端工程師10</td>
+                 <td>098811110</td>
+                 <td>ab10</td>
+             </tr>
+         </tbody>    
+    </table> 
+    
+    <script>
+     
+    // var trs = document.getElementById('table-hover').getElementsByTagName('tr');
+    var trs = document.querySelectorAll('tbody > tr');
+    for (var row=0;row < trs.length ; row++){
+        trs[row].addEventListener('mouseover',function(){
+            this.style.backgroundColor="#f5f5f5";      
+            this.style.fontWeight='blod';
+        });
+        trs[row].addEventListener('mouseout',function(){
+            this.style.backgroundColor="";
+            this.style.fontWeight='normal';
+        });
+    }
+   
+
+
+    </script>
+</body>
+</html>

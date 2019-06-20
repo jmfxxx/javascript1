@@ -1,0 +1,45 @@
+.stripe {
+    /* 表格寬度為外部容器寬度 */
+    width: 100%;
+    /* 表格上下邊距20px */
+    margin: 20px 0;
+    /* 表格框線屬性定義 */
+    border:1px solid #dddddd;
+    /* 表格邊框線合併 */
+    border-collapse: collapse;
+}
+.stripe caption {
+    /* 設定表格標題字體大小 */
+    font-size: 16px;
+    /* 設置表格標題字體加粗 */
+    font-weight: bold;
+    /* 設置表格標題字行距 */
+    line-height: 1.8em;
+    background-color: pink;
+}
+.stripe tr {
+    /* 預設文字不加粗 */
+    font-weight: normal;
+    /* 預設背景色 */
+    background-color: #fff;
+}
+.stripe tr.active {
+    /* mountover時加粗 */
+    font-weight: blod;
+    /* mouseover背景色 */
+    background-color: #8ac007;
+}
+.stripe td , .stripe .th  {
+    font-size: 14px;
+    /* 設置單元格邊框線屬性 */
+    border:1px solid #ddd ;
+    /* 設置單元格內容與框線padding */
+    padding: 8px;
+    /* 文字居中對齊 */
+    text-align: center;
+}
+
+.stripe .stripe-row {
+    /* 設置班馬線行的背景色 */
+    background-color: #f9f9f9;
+}
