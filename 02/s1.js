@@ -10,10 +10,13 @@ for (var i=0 ; i< trs.length ;i++){
 }
 
 var el = document.querySelector('.stripe');
+var bb = document.querySelectorAll('tr');
 //mouseover 移入
 el.addEventListener('mouseover',function(e){
+    console.log(e);
     var current_row=e.target.parentNode;
     var brow=el.parentNode
+    console.log(bb); //測試用，查看bb裏面的屬性用
        //可以指出目前所移到的目標-父層為何
     // console.log(e.target.parentNode);
     //可以指出目前所移到的目標為何
