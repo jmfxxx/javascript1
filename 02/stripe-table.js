@@ -12,7 +12,6 @@ rowcolor();
 //使用事件委托直接在tr祖先元素table綁定事件
 table.addEventListener('mouseover', function (e) {
     //獲取目前觸發事件的td的父元素tr作為DOM操作對象
-
     var current_row = e.target.parentNode;
 
     // 當mouseover 事件不是由td觸發、父元素標籤不是TR時停止處理

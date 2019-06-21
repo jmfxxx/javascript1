@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>03-1 垂直置中 Document</title>
+    <style>
+        /* 方法1:傳統垂直置中 */
+        /* div {
+        position:absolute;
+        margin-top:-5em;
+        margin-left:-9em;
+        background-color: #ddd;
+        width: 18em;
+        height: 10em;
+        top:50%;
+        left:50%;
+        padding: 10px;
+        box-sizing: border-box;
+    } */
+        /* 方法2:使用transform方式 */
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #15e0fd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='i'>
+        <h1>垂直置中</h1>
+        <p class='i1'>大神，你能幫我放垂直置中位置嗎？謝謝！</p>
+    </div>
+    <script>
+     var el = document.querySelector('p');
+     function clickHandler(e){
+        console.log(e);
+        window.prompt('dffdf');
+
+     }
+     el.addEventListener('click',clickHandler);
+
+     console.log(el)
+;
+   
+    
+    </script>
+</body>
+
+</html>
