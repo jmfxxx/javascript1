@@ -6,7 +6,8 @@ var table = document.querySelector('.stripe');
 var trs = table.querySelectorAll('tr');
 rowcolor();
 
-
+// var table = document.getElementsByClassName('.stripe')[0];
+// var trs = table.getElementsByTagName('tr');
 
 //使用事件委托直接在tr祖先元素table綁定事件
 table.addEventListener('mouseover', function (e) {

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>getelementbytag Document</title>
+<style>
+p {
+    
+    width: 1440px;
+    height: 1440px;
+    background-color: #aaa;
+    
+}
+</style>
+</head>
+<body>
+
+    <h1>getelementbytag</h1>
+    <p class="gogo1">請點我</p>
+    
+    <script>
+   
+    function getposition(e){
+      
+        console.log(`按下坐標是:（${e.clientX},${e.clientY}）`);
+    }
+      var point11 = document.getElementsByClassName('.gogo1'); 
+    point11.addEventListener('click',getposition);
+    </script>
+</body>
+</html>
