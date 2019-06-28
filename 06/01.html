@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>06-1 Transition練習 Document</title>
+    <!-- 按下打開會顯示圖片，變化height 0---變到400px再加上過場效果 -->
+    <style>
+        .container {
+         height: 0;
+         position: relative;
+         overflow: hidden;
+        transition: height 1s;
+        }
+        .container img {
+            position:absolute;
+            bottom: 0;
+            width: 1024px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <p>查看牆紙 <a href="javascript:" id = "button">打開</a></p>
+<div id="more" class="container"><img src="04-desk.jpg" alt=""></div>
+<script>
+(function(){
+   var eleBtn = document.getElementById('button');
+   var eleMore = document.getElementById('more')
+   var display=false;  //先設false因為後面做not後就會變true就會顯示圖片高度了(圖片會出來)
+
+   eleBtn.onclick=function(){
+       display=!display;  //依當前display值再去做反向not
+     eleMore.style.height=display ? "400px":"0px"  // true就顯示高為400px false就為0
+   return false; 
+   }
+  
+})();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    img {
+        height: 300px;
+        transition: height 5s
+    }
+    .clearfix {
+        clear:both;
+        display:block;
+    }
+</style>
+
+<body>
+    <div>
+        <a href="javascript:;">
+            <img src="https://picsum.photos/id/237/300/300" alt="">
+        </a>
+        <a href="javascript:;">
+            <img src="https://picsum.photos/id/230/300/300" alt="">
+        </a>
+        <a href="javascript:;">
+            <img src="https://picsum.photos/id/137/300/300" alt="">
+        </a>
+        <a href="javascript:;">
+            <img src="https://picsum.photos/id/37/300/300" alt="">
+        </a>
+
+    </div>
+    <div class="clearfix"></div>
+    <div class="d1"><a href="javascript:;" class="xx1">點我-全部顯示</a></div>
+    <div class="d2"><a href="javascript:;" class="xx2">點我-全部hidden</a></div>
+    <div class="d3"> <a href="javascript:;" class="xx3">現動畫~~</a></div>
+
+
+    <script>
+        var status = false;
+        var index = 0;
+        var getimg = document.querySelectorAll('img');
+        for (var x = 0; x < getimg.length; x++) {
+
+            getimg[x].setAttribute("index", x);
+            getimg[x].addEventListener('mouseover', function () {
+                status = !status;
+                this.style.height = status ? "500px" : "0px";
+            })
+
+            getimg[x].addEventListener('mouseout', function () {
+                var cc = this.getAttribute('index');
+                // console.log(cc);
+                this.style.height = "100px";
+            })
+        }
+
+        //全部顯示
+
+        var xx1 = document.querySelector('.xx1');
+        xx1.addEventListener('click', allshowHandler);
+
+        function allshowHandler() {
+            for (var i = 0; i < getimg.length; i++) {
+                getimg[i].style.display = 'block';
+                getimg[i].style.cssText ='float:left;'
+            }
+        }
+        //全部hidden
+        var xx2 = document.querySelector('.xx2')
+        xx2.addEventListener('click', allHiddenHandler);
+
+        function allHiddenHandler() {
+            for (var i = 0; i < getimg.length; i++) {
+                getimg[i].style.display = 'none';
+                console.log('我被按到了xx2全部不見')
+            }
+        }
+
+        //玩動畫
+        var xx3 = document.querySelector('.xx3')
+        xx3.addEventListener('click', function () {
+            var slide1 = getimg[0];
+            var slide2 = getimg[1];
+            var slide3 = getimg[2];
+           
+            setTimeout(allHiddenHandler, 2000); 
+            setTimeout(allshowHandler, 2000);
+            setInterval()
+            // setTimeout(function () {
+            //     slide1.style.height = "0px";
+            //     slide2.style.height = "0px";
+            //     slide3.style.height = "0px";
+            //     slide1.style.height = "300px";
+            // }, 2000);
+            // setTimeout(function () {
+            //     slide1.style.height = "0px";
+            //     slide2.style.height = "500px"
+            // }, 2000);
+
+
+        })
+    </script>
+</body>
+
+</html>

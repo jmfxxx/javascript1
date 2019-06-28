@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: 0;
+    /* 設定圖片為無邊框 */
+}
+/* 設定盒子樣式 */
+#banner_top {
+    margin: auto;
+    width: 960px;
+    display: block;
+}
+
+#banner_top_slide {
+    margin: auto;
+    width: 960px;
+    display: none;   /* 一開始不顯示 */
+}
+
+/* 用transition 屬性改變圖片高度以實現折疊效果 */
+#banner_top img {
+    width: 960px;
+    height: 500px;
+    overflow: hidden;
+    transition: height 1s;
+}
+/* 用transition 屬性改變圖片高度以實現折疊效果 */
+#banner_top_slide img {
+    width: 960px;
+    height: 0;
+    overflow: hidden;
+    transition: height 1s;
+}
+
+.main {
+    background-color: rgba(10, 236, 142, 0.81);
+    width: 960px;
+    height: 500px;
+    margin: auto;
+}
+
+div {
+   
+    width: 100px;
+    height:100px;
+    background-color: pink;
+    transition-property: width;
+    transition-duration: 5s;
+
+}
+
+div:hover{
+    width: 300px;
+}

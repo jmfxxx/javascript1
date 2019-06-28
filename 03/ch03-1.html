@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #layer {
+        width: 300px;
+        height: 200px;
+        background-color: #acd;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        animation: layer 5s 
+      } 
+      @keyframes layer {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+
+      } 
+     
+      .layer-content {
+        margin: 40px auto;
+        text-align: center;
+      }
+      .layer-title {
+        background-color: rgb(80, 168, 212);
+        padding: 10px 0;
+        box-sizing: border-box;
+        font-size: 20px;
+        text-align: center;
+        font-weight: 600;
+        color: #fff;
+      }
+      .layer-text {
+        padding: 10px 0;
+        box-sizing: border-box;
+        text-align: center;
+        color: #000;
+      }
+      .layer-content a {
+        text-decoration: none;
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+        font-size: 24 px;
+        font-weight: 600;
+        background-color: #000;
+        color: #fff;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">顯示</button>
+
+    <div id="layer">
+      <div class="layer-title">功能</div>
+      <div class="layer-text">
+        功能說明Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Expedita, eum.
+      </div>
+      <div class="layer-content">
+        <a href="javascript:;">確定</a>
+        <a href="javascript:;">取消</a>
+      </div>
+    </div>
+
+    <script>
+      function btnHandler() {
+        alert("你按了【顯示】按鈕!");
+      }
+      //按下確定
+      function okHandler() {
+        alert("你按了確定-btn");
+        el.style.color = "gold";
+        //設定css方式1
+        //單一設定css
+        el.style.backgroundColor = "blue";
+        el.style.border = "3px solid gold";
+        el.style.color = "green";
+
+        //設定css方式2
+        //使用一連串設定
+
+        // el.style.cssText = "color:yellow; font-size:33px;";
+      }
+
+      //按下取消
+      function cancelHandler() {
+        alert("你按了取消-btn");
+
+        el.style.color = "#000";
+        el.style.border = "none";
+        el.style.backgroundColor = "#aaa";
+        // el.style.display = "none";
+      }
+      //按紐顯示功能-click後觸發事件
+      var btn = document.querySelector(".btn");
+      var a1 = document.querySelectorAll("a");
+      var el = document.querySelector(".layer-text");
+      btn.addEventListener("click", btnHandler);
+
+      //按下確定click後觸發事件
+      a1[0].addEventListener("click", okHandler);
+      a1[1].addEventListener("click", cancelHandler);
+    </script>
+  </body>
+</html>

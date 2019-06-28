@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+    .c1 {
+        background-color:pink;
+        color:yellow;
+        border:3px solid red;
+        border-radius: 10x;
+
+    }
+    .c1disable {
+        background-color: #fff;
+        color:#000;
+         
+    }
+    </style>
+</head>
+<body>
+    <button class="go1">按我</button>
+    <div class="box1">
+        <div class="box-title">提示</div>
+        <div class="box-content">投資該產品需要用這些証件（身份証、健保卡）</div>
+        <div class="div">
+            <a href="javascript:;">確定</a>
+            <a href="javascript:;">取消</a>
+        </div>
+    </div>
+    <script>
+        function startClickHandler(){
+            box1.classList.add('c1');
+            console.log('你按了哦!!');
+
+        }
+
+        //按了確定
+        function btnokClickHandler(){
+            box1.classList.add('c1');
+            console.log('你按了確定鍵了!');
+          
+        }
+          //按了取消
+          function btncanelClickHandler(){
+            console.log('你按了取消鍵了!');
+            box1.classList.remove('c1');
+           box1.styles="diaplay:none";
+        }
+var btn=document.querySelector('.go1');
+var box1= document.querySelector('.box1');
+btn.addEventListener('click',startClickHandler);
+
+box1.set
+   
+var a = document.querySelectorAll('a');
+a[0].addEventListener('click',btnokClickHandler);
+a[1].addEventListener('click',btncanelClickHandler);
+    
+    </script>
+</body>
+</html>
