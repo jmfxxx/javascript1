@@ -1,4 +1,8 @@
-*{margin: 0;padding: 0;}
+/* 此js是自已寫的 */
+
+*{
+    margin: 0;padding: 0;
+}
 .noite {
    position: relative;
    background-color: #ddd;
@@ -13,7 +17,7 @@
     background-color: #aaa;
     color: blue;
     text-align: center;
-    margigin-right: 10px;
+    margin-right: 10px;
 }
 .noite-content ul {
     margin: 0;
@@ -28,7 +32,7 @@
     text-overflow: ellipsis;
     /* background-color: #acc; */
     overflow: hidden;
-    
+    display: none;
     color:orange;
 }
 .nav-arrows {
