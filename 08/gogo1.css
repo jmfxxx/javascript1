@@ -1,0 +1,50 @@
+*{margin: 0;padding: 0;}
+.noite {
+   position: relative;
+   background-color: #ddd;
+   line-height: 35px;
+    overflow: hidden;
+    /* width: 800px; */
+}
+.noite-title {
+    float: left;
+    line-height: 35px;
+    width: 70px;
+    background-color: #aaa;
+    color: blue;
+    text-align: center;
+    margigin-right: 10px;
+}
+.noite-content ul {
+    margin: 0;
+    padding: 0;
+   background-color:purple;
+    
+}
+.noite-content li {
+    line-height: 35px;
+    list-style-type: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* background-color: #acc; */
+    overflow: hidden;
+    
+    color:orange;
+}
+.nav-arrows {
+    position: absolute;
+    background-color: yellow;
+    width: 50px;  
+    right: 0;
+    top: 0;
+    bottom: 0; 
+    height: 35px;
+}
+.nav-arrows span {
+display: inline-block;
+width: 18px;
+text-align: center;
+line-height: 35px;
+color: red;
+cursor: pointer;
+}
