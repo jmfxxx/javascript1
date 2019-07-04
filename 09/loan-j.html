@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>09-房貸計算器Document</title>
+    <link rel="stylesheet" href="loan-calcuator.css">
+</head>
+<body>
+    <!-- <form action="" method="post"> -->
+<h1>房貸計算器</h1>
+<div class="formgroup">
+<label for="amount">輸入貸款金額</label>
+<input type="text" name="amount" id="amount" class="form-control">
+</div>
+<div class="formgroup">
+<label for="interest">貸款年利率</label>
+<input type="text" name="interest" id="interest" class="form-control">
+</div>
+
+<div class="formgroup">
+<label for="years">還款期數(年)</label>
+<input type="text" name="years" id="years" class="form-control" >
+</div>  
+
+<button type="submit" class="btn" >計算</button>
+<!-- </form>     -->
+
+<div class="result-group">
+    <label >每月還款金額：</label>
+    <span class="monthly_payment" id="monthly_payment"></span>
+</div>
+<div class="result-group">
+    <label >還款總額:</label>
+    <span class="total_payment" id="total_payment"></span>
+</div>
+<div class="result-group">
+<label >總利息</label>
+<span class="total_interest"></span>
+</div>
+<script src="loan-calcuator.js"> </script>
+</body>
+</html>
