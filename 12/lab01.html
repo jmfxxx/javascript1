@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 12-lab Document</title>
+</head>
+<body>
+    <div id="div-01">Here is div-01</div>
+<div id="div-02">Here is div-02</div>
+
+<script type="text/javascript">
+  var el = document.getElementById('div-01').nextElementSibling;
+  document.write('<p>Siblings of div-01</p><ol>');
+  while (el) {
+    document.write('<li>' + el.nodeName + '</li>');
+    el = el.nextElementSibling;
+  }
+  document.write('</ol>');
+</script>
+</body>
+</html>

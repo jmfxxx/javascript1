@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    }
+
+.wrap {
+    width: 510px;
+    margin: 15px auto;
+    border:1px solid #333;
+}
+
+.wrap h3 {
+    background-color: #8ac007;
+    text-align: center;
+    padding: 6px 0;
+    color:#fff;
+}
+
+.wrap .form-group {
+    margin: 15px 60px;
+}
+
+table {
+    width: 90%;
+    margin:15px auto;
+    border-collapse: collapse;
+}
+
+#message td,#message th {
+    border:1px solid #333;
+    text-align: center;
+    padding: 6px;
+    color:#333;
+}
