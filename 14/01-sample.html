@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="item1">
+       <span>請輸入區域:</span>
+    <select name="selectitem" id="selectitem">
+        <option value="1">台中</option>
+        <option value="2">高雄</option>
+        <option value="3">台南</option>
+        <option value="4">彰化</option>
+        <option value="5">嘉義</option>
+        
+    </select>
+    <div class="content">
+        <p style="background-color:pink; height: 30px;width: 150px;" id="dis"></p>
+    </div>
+</div>
+<script>
+var c1 = [{"name":"趙雲","age":30,"phone":"3212-8888"},{"name":"Mary","age":18,"phone":"888-54088"}];
+var d1 = document.getElementById('dis')
+
+for (i in c1) {
+d1.innerHTML+=(c1[i].name)+ c1[i].age+"<br>";
+console.log(c1[i].name+":"+c1[i].age)
+}
+</script>
+</body>
+
+</html>

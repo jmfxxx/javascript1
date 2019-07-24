@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test keyboard Document</title>
+</head>
+<body>
+    <a href="#">Hello!!!</a>
+   
+<div class="oo">
+     <p>你移到我了</p>
+     <input type="text" name="memo" id="memo" class="memo" >
+</div>
+    <script>
+        var p = document.querySelector('.oo');
+    
+   p.addEventListener('click',function(e){
+    console.log('你按下了mouse'+e);
+    var kb = document.querySelector('.memo');
+    kb.addEventListener('copy',function(e){
+        console.log('你按了kb');
+    })
+
+    // kb.oncopy = function(){
+    //     console.log('你 copy');
+    // }
+//     window.onkeydown = function(e){
+// console.log(e);
+// console.log('你按鍵是'+e.keyCode)
+// console.log(e.which)
+//     }
+
+
+window.addEventListener("keypress", myEventHandler, false);
+function myEventHandler(e){
+    console.log(e)
+}
+   }) 
+    
+    </script>
+</body>
+</html>

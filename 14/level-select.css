@@ -1,0 +1,15 @@
+select {
+float: left;
+ 
+outline:none;
+width: auto;
+height: 30px;
+line-height: 30px;
+padding: 0 1em;
+background-color: #fff;
+border-radius: 5px;
+border: solid 1px #cfcfcf;
+cursor: pointer;
+
+
+}

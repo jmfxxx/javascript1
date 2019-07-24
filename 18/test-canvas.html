@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    canvas {
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform: translate(-50%,-50%)
+    }
+    
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="400" style="border:1px solid blue" ></div>
+       <script>
+        var c=document.getElementById('canvas')
+        var ctx=c.getContext('2d');
+        ctx.fillStyle='#FF0000';
+        ctx.fillRect(0,0,400,240);
+        ctx.fillText('哈哈哈',300,100)
+        </script>
+</body>
+</html>

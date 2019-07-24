@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width= device-width  , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax Document</title>
+    <style>
+        .wrap {
+            width: 960px;
+            background-color:rgba(111,131,31,.3);
+            margin: 10px auto;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: blue;
+            text-align: center;
+        }
+
+        .menu1 {
+            border-radius: 30px;
+            width: 200px;
+            border: 1px solid pink;
+            font-size: 1em;
+            font-weight: 600;
+            color: red;
+            background-color: rgb(163, 81, 163);
+            height: 20px;
+            padding: 10px;
+            margin: 10px auto;
+        }
+
+        .menu1 span {
+            color: #000;
+            font-size: 1em;
+        }
+        .menu1 select {
+            color: #000;
+            font-size: 1em;
+        }
+        li {
+            list-style: none;
+            color: rgb(7, 99, 219);
+            font-size: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>台中市公私立托嬰中心一覽表</h1>
+        <div class="menu1">
+            <span>請選擇區域:</span>
+            <select name="select1" id="select1" class="select1">請選擇區域</select></div>
+            <div class="menu2">
+            <span>請選擇公私立:</span>
+            <select name="select2" id="select2" class="select2">請選擇性質類型</select></div>
+        <hr>
+        <ul>
+
+        </ul>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js'></script>
+
+    <script>
+        var x1 = [];
+        var zone = []; //區域
+        var zonetype = []; //托嬰中心類型(公立或私立)
+        var zonebb = [];
+        $(function () {
+
+            $.ajax({
+                type: "GET",
+                url: "taichung.json",
+                success: function (data) {
+                    console.log(data.ROOT.RECORD)
+                    console.log(typeof (data))
+                    for (i = 0; i < data.ROOT.RECORD.length; i++) {
+                        x1.push(data.ROOT.RECORD[i])
+                        var status = zone.indexOf(x1[i].行政區)
+                        if (status == -1) {
+                            zone.push(x1[i].行政區)
+
+                            str1 = `<option>${x1[i].行政區}</option>`
+                            $('.select1').append(str1)
+                        }
+                        var status1 = zonetype.indexOf(x1[i].性質)
+                        if (status1 == -1) {
+                            zonetype.push(x1[i].性質)
+
+                            str2 = `<option>${x1[i].性質}</option>`
+                            $('.select2').append(str2)
+                        }
+                    }
+
+                },
+            }) //ajax edn
+            $('.select1').on('change', function () {
+                $('li').each(function (el) {
+                    this.remove();
+                })
+                bb1 = x1.filter(function (item, index) {
+                    if (item.行政區 == $('select').val()) return item
+                })
+                //顯示區域選單
+                for (i = 0; i < bb1.length; i++) {
+                    $('ul').append('<li ">' + bb1[i].辦理單位 + bb1[i].成立日期 + '</li>')
+                }
+            })
+            // ------------------
+        })
+
+        //------ Jquery End
+    </script>
+</body>
+
+</html>

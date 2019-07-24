@@ -1,0 +1,94 @@
+body {
+    background-color: #333;
+    margin: 50px ;
+    /* font-family: scans-serif; */
+}
+
+/* @font-face {
+    font-family: 'icon-font';
+    src:url('font/flat-ui-icons-regular.ttf'),url('font/flat-ui-icons-regular.eot'),url('font/flat-ui-icons-regular.woff'),url('font/flat-ui-icons-regular.svg');
+} */
+
+#video{
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -100;
+    opacity: .5;
+}
+
+#player {
+    position: fixed;
+    left:50%;
+    bottom:0 ;
+    box-sizing: border-box;
+    width: 640px;
+    height: 50px;
+    transform: translateX(-50%);
+    background-color: rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.3);  
+}
+
+#player button {
+    font-size: 0;
+    border:0;
+    position: absolute;
+    background-color: none;
+}
+
+#play {
+    left:0;
+}
+#pause {
+    left:50px;
+}
+
+#play::after{
+    content: '\e616';
+    font-size: 21px;
+    font-family: 'icon-font';
+    color: #fff;
+    line-height: 50px;
+    cursor:pointer;
+}
+
+#play::hover::after{
+    color:rgba(255,255,255,.8);    
+}
+
+#pause::after {
+    content: '\e615';
+    font-size: 21px;
+    font-family: 'icon-font';
+    color: #fff;
+    line-height: 50px;
+    cursor:pointer;
+}
+#play::hover::after{
+    color:rgba(255,255,255,.8);    
+}
+#progress-bar {
+    width: 0;
+    background-color: #fff;
+    z-index: 100;
+}
+
+#progress-bg{
+    width: 450px;
+    background-color: rgba(255,255,255,.3);
+    z-index:200;
+}
+
+.progress {
+position: absolute;
+height: 10px;
+top: 20px;
+left: 150px;
+border-radius: 10px;
+
+}

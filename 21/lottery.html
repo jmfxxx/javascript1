@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>21-Lottery Document</title>
+    <link rel="stylesheet" href="lottery.css">
+</head>
+<body>  
+     
+    <div class="wrap">
+     <h1>樂透抽獎</h1>
+    <form action="" method="post">
+<div class="form-group">
+    <label for="num">總抽獎人數</label>
+    <input type="text" class="form-control" name="num" id="num">    
+</div>
+<div class="form-group">
+    <label for="exclude">排除範圍</label>
+    <input type="text" class="form-control" name="exclude" id="exclude">   
+</div>
+<div class="form-group">
+<label for="lottery_num">中獎人數</label>
+    <input type="text" class="form-control" name="lottery_num" id="lottery_num">   
+ </div>
+ <a  id="start" class="btn" onclick="get_num()">開始</a>
+ </div>
+    </form>
+    <div id="result">
+
+    </div>
+</div>
+<!-- <script src="lottery.js"></script> -->
+<script src="ljmf.js"></script>
+</body>
+</html>
