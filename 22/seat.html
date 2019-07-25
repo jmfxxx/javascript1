@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>22 坐位預訂 Document</title>
+    <link rel="stylesheet" href="seat.css">
+</head>
+
+<body>
+    <div id="main">
+        <div class="seat">
+            <div id="seat-map">
+                <div id="front">主布幕</div>
+                <div id="seat-row"></div>
+            </div>
+        </div>
+        <div id="booking-details">
+            <p>影片:<span>後來的我們</span></p>
+            <p>時間：<span>5月1日21:00</span></p>
+            <p>票價：<span>300元</span></p>
+            <p>座位：<ul id="selected-seats"></ul></p>
+            <p>票數：<span id="counter">0</span></p>
+            <p>總計：<b>$ <span id='total'></span> </b></p>
+            <button class="checkout-button">確定購買</button>
+            <div id="legend"></div>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+    </div>
+    <script src="seat.js"></script>
+</body>
+
+</html>
